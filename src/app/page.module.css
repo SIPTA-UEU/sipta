@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #0070f3, #003c8f);
+  color: white;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.header p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Animasi Hover Gambar */
+.image {
+  width: 320px;
+  height: auto;
+  margin-bottom: 40px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Tombol Navigasi */
+.buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.btn {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+/* Tombol Utama */
+.btnPrimary {
+  background: linear-gradient(90deg, #ffcc00, #ffaa00);
+  color: white;
+}
+
+.btnPrimary:hover {
+  background: linear-gradient(90deg, #ffaa00, #ff8800);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0px 8px 20px rgba(255, 140, 0, 0.4);
+}
+
+/* Tombol Outline */
+.btnOutline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btnOutline:hover {
+  background: white;
+  color: #003c8f;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Tombol Admin */
+.btnAdmin {
+  background: linear-gradient(90deg, #28a745, #1e7e34);
+  color: white;
+}
+
+.btnAdmin:hover {
+  background: linear-gradient(90deg, #1e7e34, #155724);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 255, 127, 0.3);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .image {
+    width: 260px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px;
+  }
+}
