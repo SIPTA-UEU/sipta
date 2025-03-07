@@ -52,13 +52,13 @@ export default function NavbarAdmin({ isLoggedIn }) {
           <Link href="/listmahasiswaskripsi">List Mahasiswa Skripsi</Link> {/* Services link */}
         </li>
         <li className={styles.menuItem}>
-          <Link href="/revisidokumenlengkap">Revisi Dokumen</Link> {/* Services link */}
+          <Link href="/revisidokumenlengkap">Lembar Revisi</Link> {/* Services link */}
         </li>
         {/* <li className={styles.menuItem}>
           <Link href="/contact">Contact</Link> 
         </li> */}
                 <li className={styles.menuItem}>
-          <Link href="/filenilaisemproakumulasi">Nilai Sempro</Link> 
+          <Link href="/filenilaisemproakumulasi">Lembar Acara</Link> 
         </li>
         <li className={styles.menuItem}>
           <Link href="/">Logout</Link> {/* Contact link */}

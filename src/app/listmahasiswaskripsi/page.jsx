@@ -49,6 +49,7 @@ export default function ListMahasiswaSkripsi() {
       window.open(whatsappUrl, "_blank");
       await setDoc(doc(db, "usersSkripsi", id), { status: "Semua dokumen sesuai dan lengkap" }, { merge: true });
       alert("Status updated successfully!");
+      setSelectedMahasiswa(null);
       fetchMahasiswaData(); // Refresh data after update
     } catch (error) {
       console.error("Error updating status: ", error);
@@ -119,7 +120,7 @@ export default function ListMahasiswaSkripsi() {
               <p>File Pengajuan: <a href={mahasiswa.pengajuanSidangUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
               <p>File KRS: <a href={mahasiswa.krsUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
               <p>File Daftar Nilai: <a href={mahasiswa.daftarNilaiUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
-              <p>File TA1: <a href={mahasiswa.fileTA1Url} target="_blank" rel="noopener noreferrer">Download</a></p>
+              <p>File TA2: <a href={mahasiswa.fileTA1Url} target="_blank" rel="noopener noreferrer">Download</a></p>
             </div>
           </li>
         ))}
@@ -127,7 +128,7 @@ export default function ListMahasiswaSkripsi() {
       {selectedMahasiswa && (
         <div className={styles.modal}>
           <h3>Apakah semua dokumen lengkap?</h3>
-          <button onClick={() => updateStatus(selectedMahasiswa.id)} className={styles.button}>Yes</button>
+          <button onClick={() => { updateStatus(selectedMahasiswa.id); setSelectedMahasiswa(null); }} className={styles.button}>Yes</button>
           <button onClick={() => setSelectedMahasiswa(selectedMahasiswa)} className={styles.button}>No</button>
           {selectedMahasiswa && (
             <div>
@@ -137,7 +138,7 @@ export default function ListMahasiswaSkripsi() {
                 <option value="pengajuanSidang">File Pengajuan</option>
                 <option value="krs">File KRS</option>
                 <option value="daftarNilai">File Daftar Nilai</option>
-                <option value="fileTA1">File TA 1</option>
+                <option value="fileTA1">File TA 3</option>
               </select>
               <input 
                 type="file" 

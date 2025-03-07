@@ -58,10 +58,10 @@ export default function Navbar({ isLoggedIn }) {
           <Link href="/contact">Contact</Link> 
         </li> */}
         <li className={styles.menuItem}>
-          <Link href="/filerevisi">Revisi</Link> 
+          <Link href="/filerevisi">Lembar Revisi</Link> 
         </li>
         <li className={styles.menuItem}>
-          <Link href="/filenilai">Nilai Sempro</Link>
+          <Link href="/filenilai">Lembar Acara</Link>
         </li>
         {/* Show logout option only if logged in */}
         {isLoggedIn && (

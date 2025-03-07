@@ -13,8 +13,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Penjadwalan Sidang TA",
-  description: "Atur jadwal sidang Anda dengan mudah, di mana saja.",
+  title: "SIPTA",
+  description: "Sistem Informasi Pengelolaan Tugas Akhir",
 };
 
 export default function RootLayout({ children }) {

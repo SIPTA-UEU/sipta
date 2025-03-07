@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { auth, db } from "../../firebase"; // Assuming you have initialized Firebase
 import { onAuthStateChanged } from "firebase/auth"; // Import the method to check auth state
-
+import { motion } from "framer-motion";
 // import styles from "./dashboard.module.css"; // Import CSS untuk styling
 import Navbar from "../navbar/Navbar";
 import Link from 'next/link';
@@ -29,22 +29,26 @@ export default function DashboardPenguji() {
     <>
       <NavbarPenguji isLoggedIn={isLoggedIn} />
       <div className={styles.container}>
-      <div className={styles.header}>
-        <h1>Selamat Datang di Penjadwalan Sidang Mahasiswa</h1>
-        <p>Atur jadwal sidang Anda dengan mudah, di mana saja.</p>
-      </div>
+      {/* Konten */}
+      <motion.div
+        className={styles.content}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <img src="\image\sipta.png" alt="SIPTA" className={styles.image} />
+      </motion.div>
 
-      <div className={styles.buttons}>
-        <Link href="/dashboardsempro">
-          <button className={styles.btn}>Seminar Proposal</button>
-        </Link>
-        <Link href="/dashboardskripsi">
-          <button className={styles.btnAdmin}>Skripsi</button>
-        </Link>
-        {/* <Link href="/adminLogin">
-          <button className={styles.btnAdmin}>Admin Registrasi</button>
-        </Link> */}
-      </div>
+      {/* Header */}
+      <motion.div
+        className={styles.header}
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h1>Selamat Datang</h1>
+        <p>Sistem Informasi Pengelolaan Sidang - Universitas Esa Unggul</p>
+      </motion.div>
     </div>
     </>
   );

@@ -1,68 +1,99 @@
-/* src/app/adminLogin/adminLogin.module.css */
+/* Container utama */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(to right, #0070f3, #003c8f);
+  color: white;
+  padding: 20px;
+}
 
-/* .inputField {
-    margin: 10px 0;
-    padding: 10px;
-  }
-  
-  .submitButton {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .submitButton:hover {
-    background-color: #45a049;
-  }
-   */
+/* Judul */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
 
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+}
 
+/* Input Field */
+.inputField {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    background-color: #f4f4f4;
+/* Efek saat input aktif */
+.inputField:focus {
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Tombol Submit */
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background: #ffcc00;
+  color: #003c8f;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efek Hover & Klik */
+.submitButton:hover {
+  background: #ffaa00;
+  transform: translateY(-3px);
+}
+
+.submitButton:active {
+  background: #e69500;
+  transform: translateY(1px);
+}
+
+/* Animasi Masuk */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
   .inputField {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    font-size: 14px;
   }
-  
+
   .submitButton {
-    padding: 10px;
     font-size: 16px;
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
   }
-  
-  .submitButton:hover {
-    background-color: #0056b3;
-  }
-  
+}

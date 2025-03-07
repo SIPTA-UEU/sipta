@@ -3,11 +3,6 @@
 import { useEffect, useState } from "react";
 import { db } from "../../firebase"; // Adjust path as needed
 import { collection, getDocs } from "firebase/firestore";
-// import styles from "../userlist/userList.module.css"; // Use the same CSS file
-import Navbar from "../navbar/Navbar";
-import NavbarKaprodi from "../navbarkaprodi/page";
-import DosenListPenguji from "../pengujilist/page";
-import ListPengujiSemproMahasiswaAcc from "../listpengujisempromahasiswaacc/page";
 import ListAllUsersSempro from "../listpengujisempromahasiswaacc/page";
 
 export default function TampilanListAccPenguji() {

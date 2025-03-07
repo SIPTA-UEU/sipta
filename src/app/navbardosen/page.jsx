@@ -48,12 +48,6 @@ export default function NavbarDosen({ isLoggedIn }) {
         <li className={styles.menuItem}>
           <Link href="/listjadwalsempromahasiswa">Jadwal Sempro</Link> {/* Mahasiswa List link */}
         </li>
-        {/* <li className={styles.menuItem}>
-          <Link href="/services">Services</Link> 
-        </li> */}
-        <li className={styles.menuItem}>
-          <Link href="/revisidosenpebimbing">Revisi Sempro Mahasiswa</Link> {/* Services link */}
-        </li>
         <li className={styles.menuItem}>
           <Link href="/semproskripsimahasiswa">Sempro Skripsi Mahasiswa</Link> {/* Services link */}
         </li>
