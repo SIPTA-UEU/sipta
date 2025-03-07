@@ -49,7 +49,10 @@ export default function ListMahasiswaSkripsi() {
       window.open(whatsappUrl, "_blank");
       await setDoc(doc(db, "usersSkripsi", id), { status: "Semua dokumen sesuai dan lengkap" }, { merge: true });
       alert("Status updated successfully!");
+<<<<<<< HEAD
       setSelectedMahasiswa(null);
+=======
+>>>>>>> 686f11d5d4b1969ada7f2d1f90da6af832616387
       fetchMahasiswaData(); // Refresh data after update
     } catch (error) {
       console.error("Error updating status: ", error);
@@ -120,7 +123,11 @@ export default function ListMahasiswaSkripsi() {
               <p>File Pengajuan: <a href={mahasiswa.pengajuanSidangUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
               <p>File KRS: <a href={mahasiswa.krsUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
               <p>File Daftar Nilai: <a href={mahasiswa.daftarNilaiUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
+<<<<<<< HEAD
               <p>File TA2: <a href={mahasiswa.fileTA1Url} target="_blank" rel="noopener noreferrer">Download</a></p>
+=======
+              <p>File TA1: <a href={mahasiswa.fileTA1Url} target="_blank" rel="noopener noreferrer">Download</a></p>
+>>>>>>> 686f11d5d4b1969ada7f2d1f90da6af832616387
             </div>
           </li>
         ))}
@@ -128,7 +135,11 @@ export default function ListMahasiswaSkripsi() {
       {selectedMahasiswa && (
         <div className={styles.modal}>
           <h3>Apakah semua dokumen lengkap?</h3>
+<<<<<<< HEAD
           <button onClick={() => { updateStatus(selectedMahasiswa.id); setSelectedMahasiswa(null); }} className={styles.button}>Yes</button>
+=======
+          <button onClick={() => updateStatus(selectedMahasiswa.id)} className={styles.button}>Yes</button>
+>>>>>>> 686f11d5d4b1969ada7f2d1f90da6af832616387
           <button onClick={() => setSelectedMahasiswa(selectedMahasiswa)} className={styles.button}>No</button>
           {selectedMahasiswa && (
             <div>
@@ -138,7 +149,11 @@ export default function ListMahasiswaSkripsi() {
                 <option value="pengajuanSidang">File Pengajuan</option>
                 <option value="krs">File KRS</option>
                 <option value="daftarNilai">File Daftar Nilai</option>
+<<<<<<< HEAD
                 <option value="fileTA1">File TA 3</option>
+=======
+                <option value="fileTA1">File TA 1</option>
+>>>>>>> 686f11d5d4b1969ada7f2d1f90da6af832616387
               </select>
               <input 
                 type="file" 

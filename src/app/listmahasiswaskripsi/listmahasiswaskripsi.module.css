@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Container utama dengan gradient modern */
 .container {
   width: 90%;
@@ -187,3 +188,50 @@
     padding: 20px;
   }
 }
+=======
+.list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .listItem {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .subTitle {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .button:disabled {
+    background-color: #ccc; /* Grey */
+    cursor: not-allowed;
+  }
+  
+>>>>>>> 686f11d5d4b1969ada7f2d1f90da6af832616387

@@ -58,10 +58,17 @@ export default function Navbar({ isLoggedIn }) {
           <Link href="/contact">Contact</Link> 
         </li> */}
         <li className={styles.menuItem}>
+<<<<<<< HEAD
           <Link href="/filerevisi">Lembar Revisi</Link> 
         </li>
         <li className={styles.menuItem}>
           <Link href="/filenilai">Lembar Acara</Link>
+=======
+          <Link href="/filerevisi">Revisi</Link> 
+        </li>
+        <li className={styles.menuItem}>
+          <Link href="/filenilai">Nilai Sempro</Link>
+>>>>>>> 686f11d5d4b1969ada7f2d1f90da6af832616387
         </li>
         {/* Show logout option only if logged in */}
         {isLoggedIn && (

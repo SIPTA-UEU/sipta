@@ -172,7 +172,11 @@ export default function ListMahasiswaAccSkripsi() {
             <p>File Pengajuan: <a href={mahasiswa.pengajuanSidangUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
             <p>File KRS: <a href={mahasiswa.krsUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
             <p>File Daftar Nilai: <a href={mahasiswa.daftarNilaiUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
+<<<<<<< HEAD
             <p>File TA2: <a href={mahasiswa.fileTA1Url} target="_blank" rel="noopener noreferrer">Download</a></p>
+=======
+            <p>File TA1: <a href={mahasiswa.fileTA1Url} target="_blank" rel="noopener noreferrer">Download</a></p>
+>>>>>>> 686f11d5d4b1969ada7f2d1f90da6af832616387
             <p>File Jurnal: <a href={mahasiswa.fileJurnalUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
             <p>File Bukti Submit Jurnal: <a href={mahasiswa.fileBuktiSubmitJurnalUrl} target="_blank" rel="noopener noreferrer">Download</a></p>
             <p>File Sertifikat BNSP: <a href={mahasiswa.fileBNSPUrl} target="_blank" rel="noopener noreferrer">Download</a></p>

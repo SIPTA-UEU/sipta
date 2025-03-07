@@ -85,6 +85,7 @@
 }
 
 /* File Links */
+<<<<<<< HEAD
 .listItem p a {
   color: #ffaa00;
   font-weight: bold;
@@ -95,6 +96,29 @@
 .listItem p a:hover {
   color: #ff8800;
   text-decoration: underline;
+=======
+.fileLinks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.fileLinks a {
+  color: #002F6C;
+  text-decoration: none;
+  font-weight: bold;
+  background: rgba(0, 47, 108, 0.1);
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  margin: 5px 0;
+  display: block;
+  text-align: center;
+}
+
+.fileLinks a:hover {
+  background: rgba(0, 47, 108, 0.3);
+>>>>>>> 686f11d5d4b1969ada7f2d1f90da6af832616387
 }
 
 /* Dropdown Styling */
