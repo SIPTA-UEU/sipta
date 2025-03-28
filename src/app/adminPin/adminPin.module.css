@@ -1,0 +1,120 @@
+/* Container utama */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #0070f3, #003c8f);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Judul */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: bounceIn 1s ease-in-out;
+}
+
+/* Form */
+.pinForm {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Input PIN */
+.pinInput {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efek ketika input aktif */
+.pinInput:focus {
+  border-color: #ffcc00;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+/* Tombol Submit */
+.submitButton {
+  padding: 12px 24px;
+  background: #ffcc00;
+  color: #003c8f;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+/* Efek Hover & Klik */
+.submitButton:hover {
+  background: #ffaa00;
+  transform: translateY(-3px);
+}
+
+.submitButton:active {
+  background: #e69500;
+  transform: translateY(1px);
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi Bounce */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .pinInput {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .submitButton {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

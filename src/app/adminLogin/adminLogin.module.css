@@ -1,0 +1,99 @@
+/* Container utama */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(to right, #0070f3, #003c8f);
+  color: white;
+  padding: 20px;
+}
+
+/* Judul */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Input Field */
+.inputField {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek saat input aktif */
+.inputField:focus {
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Tombol Submit */
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background: #ffcc00;
+  color: #003c8f;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efek Hover & Klik */
+.submitButton:hover {
+  background: #ffaa00;
+  transform: translateY(-3px);
+}
+
+.submitButton:active {
+  background: #e69500;
+  transform: translateY(1px);
+}
+
+/* Animasi Masuk */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .inputField {
+    font-size: 14px;
+  }
+
+  .submitButton {
+    font-size: 16px;
+  }
+}
